@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 public class Collections {
     public static void main(String[] args) throws IOException {
@@ -24,7 +25,17 @@ public class Collections {
         }
 
         //Обычный HashMap
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
+//        HashMap<String, Integer> map = new HashMap<String, Integer>();
+//        for (String [] words : lineWords){
+//            if (map.containsKey(words[9])){
+//                Integer k = map.get(words[9]);
+//                k = k + 1;
+//                map.put(words[9], k);
+//            } else {
+//                map.put(words[9], 1);
+//            }
+//        }
+        TreeMap<String, Integer> map = new TreeMap<String, Integer>();
         for (String [] words : lineWords){
             if (map.containsKey(words[9])){
                 Integer k = map.get(words[9]);
